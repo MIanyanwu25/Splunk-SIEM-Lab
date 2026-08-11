@@ -137,9 +137,13 @@ Splunk Enterprise is free. You get a 60-day full trial, after which it converts 
 ### Connect via SSH
 
 **macOS / Linux:**
+Visual Studio Code was used to run this command. Make sure your terminal is set to bash and NOT Powershell
+<img width="1113" height="938" alt="01  VS must have terminal as Bash not Powershell" src="https://github.com/user-attachments/assets/19aa23c2-f0f4-45b1-b879-f852c955b10a" />
+
+
 ```bash
 # Fix key file permissions first (required — SSH will refuse connection without this)
-cd ~/Downloads
+cd ~/location_of_pem_file
 chmod 400 yourkey.pem
 
 # Connect
