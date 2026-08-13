@@ -473,7 +473,7 @@ Here is an example of how it should look:
 ## Step 6 — Build a Security Dashboard
 How instead of searching these previous indexes individually, you can build a dashboard of them all so you don't have to keep searching this every time.
 
-1. In Splunk, click **Dashboards** → **Create New Dashboard**
+1. In Splunk, click **Dashboards** (it's on the left hand side) → **Create New Dashboard**
 2. Title: `Windows Security Overview` · Type: **Classic Dashboards** · click **Create Dashboard**
 3. Add each panel below using **Add Panel → New Search**
 
