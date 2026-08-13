@@ -484,6 +484,9 @@ How instead of searching these previous indexes individually, you can build a da
 | Login Activity Over Time | `index=windows_logs sourcetype=WinEventLog:Security EventCode=4624 \| timechart count` | Line chart |
 | After-Hours Logins | `index=windows_logs sourcetype=WinEventLog:Security EventCode=4624 \| eval hour=strftime(_time, "%H") \| where hour < 7 OR hour > 19 \| table _time, Account_Name, Account_Domain, ComputerName \| sort -_time` | Events |
 
+Sample of Dashboard:
+<img width="1911" height="975" alt="image" src="https://github.com/user-attachments/assets/44a42ac1-76f8-4478-80ce-1c23b4871006" />
+
 ---
 
 ## Step 7 — Create an Automated Alert
