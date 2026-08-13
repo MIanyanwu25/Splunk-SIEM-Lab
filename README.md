@@ -477,7 +477,7 @@ How instead of searching these previous indexes individually, you can build a da
 2. Title: `Windows Security Overview` · Type: **Classic Dashboards** · click **Create Dashboard**
 3. Add each panel below using **Add Panel → New Search**
 
-| Panel | Search | Visualisation |
+| Panel | Search | Visualization (click first under "New") |
 |---|---|---|
 | Account Activity — Last 24h | `index=windows_logs sourcetype=WinEventLog:Security EventCode=4624 \| stats count by Account_Name \| sort -count` | Bar chart |
 | Top Processes — Last 24h | `index=windows_logs sourcetype=WinEventLog:Security EventCode=4688 \| stats count by Creator_Process_Name \| sort -count \| head 20` | Events list |
