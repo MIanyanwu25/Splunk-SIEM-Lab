@@ -399,6 +399,8 @@ All searches are typed into the search bar at the top of the Search & Reporting 
 index=windows_logs | head 100
 ```
 If this returns results, your forwarder is working. If it returns nothing, check that the `SplunkForwarder` service is running on the Windows VM.
+Here is an example of how it should look
+<img width="1902" height="1016" alt="image" src="https://github.com/user-attachments/assets/b43ac3ac-8dbd-4b7a-9933-a325c7948647" />
 
 ### Find Successful Logins (Event ID 4624)
 ```spl
@@ -410,6 +412,8 @@ index=windows_logs sourcetype=WinEventLog:Security EventCode=4624
 # sort -count                  — highest count first
 # Account names ending in $ are computer accounts — normal and expected
 ```
+Here is an example of how it should look:
+<img width="1909" height="895" alt="image" src="https://github.com/user-attachments/assets/9c2de698-dee6-44d0-bb0e-76f9717134ba" />
 
 ### Detect After-Hours Logins
 ```spl
@@ -423,6 +427,8 @@ index=windows_logs sourcetype=WinEventLog:Security EventCode=4624
 # where hour < 7 OR hour > 19     — keep only events outside 7am–7pm
 # Human accounts (no $) logging in after hours warrant review
 ```
+Here is an example of how it should look:
+<img width="1904" height="1021" alt="image" src="https://github.com/user-attachments/assets/24b6ff02-c9d2-4a4c-9ce3-ecaecbca8960" />
 
 ### Detect Logon with Explicit Credentials (Event ID 4648)
 ```spl
