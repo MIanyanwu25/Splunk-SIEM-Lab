@@ -231,7 +231,7 @@ Do this on your **Windows Server VM from Lab 1** — not the Ubuntu VM.
 | Installation Options | Check the licence box. Select **An on-premises Splunk Enterprise instance**. Do NOT select Splunk Cloud |
 | Administrator credentials | Username: `admin`. Uncheck Generate random password. Set a password and write it down |
 | Deployment Server | **Leave completely blank.** Do not enter your Splunk VM IP here |
-| Receiving Indexer | Enter your Splunk VM's **private IP** (the `10.x.x.x` from Azure portal) and port `9997` |
+| Receiving Indexer | Enter your Splunk VM's **private IP** (from the Azure portal in the Overview section under Networking) and port `9997` |
 
 > ⚠️ The Deployment Server field is a common mistake. Entering your Splunk VM IP here causes the forwarder to phone home to the wrong address and no data will flow. Leave it blank.
 
@@ -239,7 +239,7 @@ Do this on your **Windows Server VM from Lab 1** — not the Ubuntu VM.
 
 Create this file on your **Windows Server VM** using VS Code (Run as Administrator):
 
-**File path:** `C:\Program Files\SplunkUniversalForwarder\etc\system\local\inputs.conf`
+**File path:** `C:\Program Files\SplunkUniversalForwarder\etc\system\local\`
 
 > If the `local` folder does not exist, create it in Windows Explorer first.
 
