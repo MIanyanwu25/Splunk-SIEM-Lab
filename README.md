@@ -440,6 +440,8 @@ index=windows_logs sourcetype=WinEventLog:Security EventCode=4648
 # Legitimate uses: scheduled tasks, backup agents
 # Suspicious uses: lateral movement, credential stuffing
 ```
+Here is an example of how it should look:
+<img width="1907" height="1000" alt="image" src="https://github.com/user-attachments/assets/4af2c4bd-4365-4495-96df-464ff89e24a5" />
 
 ### Detect Process Creation (Event ID 4688)
 ```spl
@@ -451,6 +453,8 @@ index=windows_logs sourcetype=WinEventLog:Security EventCode=4688
 # Processes run from temp folders, AppData, or unusual paths are suspicious
 # cmd.exe and powershell.exe spawned by unexpected parents are red flags
 ```
+Here is an example of how it should look:
+<img width="1901" height="988" alt="image" src="https://github.com/user-attachments/assets/60542349-ee0d-4141-b5a0-8d991434284e" />
 
 ### Detect Service Installations (Event ID 4697)
 ```spl
@@ -461,10 +465,13 @@ index=windows_logs sourcetype=WinEventLog:Security EventCode=4697
 # Services are a favourite persistence mechanism for malware
 # Services with random names or pointing to temp directories are suspicious
 ```
+Here is an example of how it should look:
+<img width="1904" height="980" alt="image" src="https://github.com/user-attachments/assets/a11bf5d3-2998-4aff-93eb-377828860dd3" />
 
 ---
 
 ## Step 6 — Build a Security Dashboard
+How instead of searching these previous indexes individually, you can build a dashboard of them all so you don't have to keep searching this every time.
 
 1. In Splunk, click **Dashboards** → **Create New Dashboard**
 2. Title: `Windows Security Overview` · Type: **Classic Dashboards** · click **Create Dashboard**
