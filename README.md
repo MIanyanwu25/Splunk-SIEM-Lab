@@ -244,7 +244,7 @@ Create this file on your **Windows Server VM** using VS Code (Run as Administrat
 
 > If the `local` folder does not exist, create it in Windows Explorer first.
 
-Create a new file in VS Code called inputs.conf
+Create a new file in VS Code called inputs.conf and insert all these codes
 
 ```ini
 # Each section in square brackets defines one log source to collect
