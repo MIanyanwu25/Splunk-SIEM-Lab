@@ -237,13 +237,15 @@ Do this on your **Windows Server VM from Lab 1** — not the Ubuntu VM.
 
 ### Part C — Configure inputs.conf
 
+If VS code is installed, after going to file path type below, type 'code .' in the file directory section and it will open VS Code at this exact directory.
 Create this file on your **Windows Server VM** using VS Code (Run as Administrator):
 
 **File path:** `C:\Program Files\SplunkUniversalForwarder\etc\system\local\`
 
 > If the `local` folder does not exist, create it in Windows Explorer first.
 
-If VS code is installed, after going to file path type 'code .' in the file directory section and it will open VS Code at this exact directory.
+Create a new file in VS Code called inputs.conf
+
 ```ini
 # Each section in square brackets defines one log source to collect
 
