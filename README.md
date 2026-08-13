@@ -204,7 +204,7 @@ http://YOUR_VM_PUBLIC_IP:8000
 | **3. Splunk is listening on 8000** | Run: `sudo ss -tlnp \| grep 8000` — expected: a line showing `0.0.0.0:8000` with `splunkd` |
 | **4. Correct public IP** | Get the current IP from Azure portal → VM Overview. Dynamic IPs change when a VM is stopped — always check the portal |
 | **5. Port 9997 NSG rule** | Add inbound rule to Splunk VM NSG: port `9997`, priority `320`, name `Allow-SplunkForwarder-WindowsVM` |
-| **6. VNet Peering (if VMs are in different VNets)** | Azure portal → Your Splunk VM → Resource group → your Splunk VNet → Peerings → Add. Name the links descriptively: `splunk-vnet-to-ad-vnet` and `ad-vnet-to-splunk-vnet`. Wait for both to show status **Connected** before continuing |
+| **6. VNet Peering (if VMs are in different VNets)** | Azure portal → Your Splunk VM → Resource group → your Splunk VNet → Peerings → Add. Name the links descriptively: `splunk-vnet-to-ad-vnet` and `ad-vnet-to-splunk-vnet`. In first virtual network setting select the one associated with your windows VM.  Wait for both to show status **Connected** before continuing |
 
 ---
 
