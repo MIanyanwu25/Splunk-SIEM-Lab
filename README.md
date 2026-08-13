@@ -243,6 +243,7 @@ Create this file on your **Windows Server VM** using VS Code (Run as Administrat
 
 > If the `local` folder does not exist, create it in Windows Explorer first.
 
+If VS code is installed, after going to file path type 'code .' in the file directory section and it will open VS Code at this exact directory.
 ```ini
 # Each section in square brackets defines one log source to collect
 
