@@ -26,8 +26,8 @@ A medium-sized organisation generates millions of log events every day. Without 
 ## Architecture
 
 ```
-┌─────────────────────────────────────┐      Port 9997       ┌──────────────────────────────────┐
-│   Windows Server VM (Lab 1)         │ ──────────────────►  │   Ubuntu VM                      │
+┌─────────────────────────────────────┐      Port 9997        ┌──────────────────────────────────┐
+│   Windows Server VM (Lab 1)         │ ──────────────────►   │   Ubuntu VM                      │
 │   Active Directory Domain Controller│                       │   Splunk Enterprise              │
 │   Splunk Universal Forwarder        │                       │   Indexer + Web UI (port 8000)   │
 │                                     │                       │                                  │
