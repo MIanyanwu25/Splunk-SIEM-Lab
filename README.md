@@ -286,7 +286,7 @@ A fresh Windows Server VM has mostly empty Security logs. Run this script to gen
 
 > This script creates a temporary local user account called `labtest.user`, generates login activity against it, then deletes it. Nothing is installed or changed permanently on the VM.
 
-**Open PowerShell as Administrator** (right-click Start → Windows PowerShell (Admin)) and paste the entire script:
+**Open PowerShell ISE as Administrator** (right-click Start → Windows PowerShell ISE (Admin)) and paste the entire script:
 
 ```powershell
 # ============================================================
