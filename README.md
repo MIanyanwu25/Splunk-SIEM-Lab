@@ -16,10 +16,10 @@
 | **Certification Alignment** | CompTIA Security+ · CySA+ · Splunk Core Certified User |
 | **Tools Used** | Splunk Enterprise (free) · Azure Ubuntu VM · Windows Server VM (Lab 1) |
 | **Time to Complete** | 4–6 hours across multiple sessions |
-| **Estimated Cost** | $0 — Splunk Free licence covers everything in this lab |
+| **Estimated Cost** | $0 — Splunk Free license covers everything in this lab |
 | **Career Relevance** | SOC Analyst (Tier 1–3) · Security Engineer · Incident Responder · Cloud Security Engineer |
 
-A medium-sized organisation generates millions of log events every day. Without a SIEM, those logs sit in separate systems and nobody can search across them, correlate events, or identify patterns that indicate an attack. This lab deploys a fully functional Splunk SIEM, ingests real Windows security logs from the Active Directory environment built in Lab 1, and teaches you to write SPL queries, build dashboards, and automate detection alerts — the exact workflow used by SOC analysts in enterprise environments.
+A medium-sized organization generates millions of log events every day. Without a SIEM, those logs sit in separate systems and nobody can search across them, correlate events, or identify patterns that indicate an attack. This lab deploys a fully functional Splunk SIEM, ingests real Windows security logs from the Active Directory environment built in Lab 1, and teaches you to write SPL queries, build dashboards, and automate detection alerts — the exact workflow used by SOC analysts in enterprise environments.
 
 ---
 
@@ -58,7 +58,7 @@ A medium-sized organisation generates millions of log events every day. Without 
 SIEM stands for Security Information and Event Management. A SIEM collects log data from across your entire environment — servers, workstations, firewalls, cloud services, applications — and makes it all searchable in one place. The two core jobs of a SIEM are **correlation** (connecting events across different systems to identify patterns no single system would reveal alone) and **alerting** (automatically notifying analysts when suspicious conditions are met).
 
 ### What is SPL?
-SPL (Splunk Processing Language) is the query language used to ask Splunk questions. It works as a pipeline — you start with a search, then pipe the results through commands that filter, transform, and visualise the data. Every SPL search follows the same pattern: **find the events, then shape the results.** Each search in this lab is explained line by line.
+SPL (Splunk Processing Language) is the query language used to ask Splunk questions. It works as a pipeline — you start with a search, then pipe the results through commands that filter, transform, and visualize the data. Every SPL search follows the same pattern: **find the events, then shape the results.** Each search in this lab is explained line by line.
 
 ### What is a Splunk Index?
 An index in Splunk is like a database table — a named storage bucket where events are kept. When logs arrive, they are stored in an index. When you search, you specify which index with `index=name`. In this lab you create one index called `windows_logs`.
@@ -98,7 +98,7 @@ A lightweight free agent installed on any machine whose logs you want to send to
 | Deploy Splunk and configure a data input | Every Splunk deployment starts with getting data in — the Universal Forwarder is how most enterprises feed logs to Splunk |
 | Navigate the Splunk interface | Search, dashboards, alerts, reports — table stakes for any SOC role |
 | Write SPL searches | SPL separates analysts who find threats from analysts who stare at dashboards |
-| Build security dashboards | Visualise login failures over time, top source IPs, failed authentication by user |
+| Build security dashboards | Visualize login failures over time, top source IPs, failed authentication by user |
 | Identify failed login attempts | Distinguish normal user error from brute force — one of the most common security investigations |
 | Build an automated alert | Splunk fires when conditions you define are met, rather than waiting for a human to notice |
 | Search for account lockout events | A pattern of lockouts can indicate a password spray attack in progress |
@@ -109,7 +109,7 @@ A lightweight free agent installed on any machine whose logs you want to send to
 
 ### Download Splunk Enterprise (Free)
 
-Splunk Enterprise is free. You get a 60-day full trial, after which it converts to the free licence. The free licence covers 500MB/day of indexing — more than enough for a lab.
+Splunk Enterprise is free. You get a 60-day full trial, after which it converts to the free license. The free license covers 500MB/day of indexing — more than enough for a lab.
 
 1. Get a temporary email at [temp-mail.org](https://temp-mail.org/en/) — copy the address shown on screen
 2. Go to [splunk.com/en_us/download/splunk-enterprise.html](https://www.splunk.com/en_us/download/splunk-enterprise.html)
@@ -228,7 +228,7 @@ Do this on your **Windows Server VM from Lab 1** — not the Ubuntu VM.
 
 | Screen | Setting |
 |---|---|
-| Installation Options | Check the licence box. Select **An on-premises Splunk Enterprise instance**. Do NOT select Splunk Cloud |
+| Installation Options | Check the license box. Select **An on-premises Splunk Enterprise instance**. Do NOT select Splunk Cloud |
 | Administrator credentials | Username: `admin`. Uncheck Generate random password. Set a password and write it down |
 | Deployment Server | **Leave completely blank.** Do not enter your Splunk VM IP here |
 | Receiving Indexer | Enter your Splunk VM's **private IP** (from the Azure portal in the Overview section under Networking) and port `9997` |
@@ -462,7 +462,7 @@ index=windows_logs sourcetype=WinEventLog:Security EventCode=4697
 | table _time, Account_Name, Service_Name, Service_File_Name
 | sort -_time
 
-# Services are a favourite persistence mechanism for malware
+# Services are a favorite persistence mechanism for malware
 # Services with random names or pointing to temp directories are suspicious
 ```
 Here is an example of how it should look:
